@@ -20,7 +20,7 @@
 @property (nonatomic, strong) NSURL         *originUrl;
 
 /** 原图大小 */
-@property (nonatomic, assign) long          *originalImageSize;
+@property (nonatomic, assign) long          originalImageSize;
 
 /** 来源imageView */
 @property (nonatomic, strong) UIImageView   *sourceImageView;
