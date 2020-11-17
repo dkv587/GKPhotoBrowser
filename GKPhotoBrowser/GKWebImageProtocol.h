@@ -39,6 +39,6 @@ typedef void (^GKWebImageCompletionBlock)(UIImage * _Nullable image, NSURL * _Nu
 
 /// 根据url从内存中获取图片
 /// @param url url
-- (UIImage *_Nullable)imageFromMemoryForURL:(nullable NSURL *)url;
+- (UIImage *_Nullable)imageFromDiskForURL:(nullable NSURL *)url;
 
 @end

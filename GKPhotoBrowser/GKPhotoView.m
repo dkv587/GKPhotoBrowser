@@ -149,16 +149,16 @@
         [self.scrollView setZoomScale:1.0 animated:NO];
         
         // 获取原图的缓存
-        if ([_imageProtocol imageFromMemoryForURL:photo.originUrl]) {
+        if ([_imageProtocol imageFromDiskForURL:photo.originUrl]) {
             photo.originFinished = YES;
         }
 
-        if ([_imageProtocol imageFromMemoryForURL:photo.url]) {
+        if ([_imageProtocol imageFromDiskForURL:photo.url]) {
             photo.finished = YES;
         }
         
         // 优先加载缓存图片
-        UIImage *placeholderImage = [_imageProtocol imageFromMemoryForURL:photo.url];
+        UIImage *placeholderImage = [_imageProtocol imageFromDiskForURL:photo.url];
         // 如果没有就加载sourceImageView的image
         if (!placeholderImage) {
             placeholderImage = photo.sourceImageView.image;

@@ -37,7 +37,7 @@
     [imageView yy_cancelCurrentImageRequest];
 }
 
-- (UIImage *)imageFromMemoryForURL:(NSURL *)url {
+- (UIImage *)imageFromDiskForURL:(NSURL *)url {
     YYWebImageManager *manager = [YYWebImageManager sharedManager];
     NSString *key = [manager cacheKeyForURL:url];
     return [manager.cache getImageForKey:key withType:YYImageCacheTypeAll];

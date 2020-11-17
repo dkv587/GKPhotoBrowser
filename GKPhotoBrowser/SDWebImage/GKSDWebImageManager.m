@@ -45,9 +45,9 @@
     [imageView sd_cancelCurrentImageLoad];
 }
 
-- (UIImage *)imageFromMemoryForURL:(NSURL *)url {
+- (UIImage *)imageFromDiskForURL:(NSURL *)url {
     NSString *key = [[SDWebImageManager sharedManager] cacheKeyForURL:url];
-    return [[SDImageCache sharedImageCache] imageFromMemoryCacheForKey:key];
+    return [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:key];
 }
 
 @end
