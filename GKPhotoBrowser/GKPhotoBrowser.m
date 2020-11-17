@@ -138,7 +138,7 @@ static Class imageManagerClass = nil;
     GKPhotoView *photoView  = [self currentPhotoView];
     self.curPhotoView = photoView;
     
-    if ([_imageProtocol imageFromDiskForURL:photo.url] || photo.image) {
+    if ([_imageProtocol imageFromCacheForURL:photo.url] || photo.image) {
         [photoView setupPhoto:photo];
     }else {
         photoView.imageView.image = photo.placeholderImage ? photo.placeholderImage : photo.sourceImageView.image;
