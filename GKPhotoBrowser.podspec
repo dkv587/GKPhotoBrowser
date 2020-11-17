@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'SD' do |sd|
     sd.source_files = 'GKPhotoBrowser/*.{h,m}', 'GKPhotoBrowser/SDWebImage/*.{h,m}'
-    sd.dependency 'SDWebImage', '~> 5.0'
+    sd.dependency 'SDWebImage', '~> 5.9.2'
   end
   
   s.subspec 'YY' do |yy|
